@@ -5,6 +5,9 @@ gcc -c -Wall -Werror -fpic foo.c
 gcc -shared -o libfoo.so foo.o
 gcc -L`pwd` -Wall -o test main.c -lfoo
 
+Optional, for running ./test (not needed for `python3 t.py`)
+export LD_LIBRARY_PATH=`pwd`
+
 and again when modifying the library:
 gcc -c -Wall -Werror -fpic foo.c
 gcc -shared -o libfoo.so foo.o

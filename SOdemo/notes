@@ -1,0 +1,11 @@
+https://www.cprogramming.com/tutorial/shared-libraries-linux-gcc.html
+
+compiling:
+gcc -c -Wall -Werror -fpic foo.c
+gcc -shared -o libfoo.so foo.o
+gcc -L`pwd` -Wall -o test main.c -lfoo
+
+and again when modifying the library:
+gcc -c -Wall -Werror -fpic foo.c
+gcc -shared -o libfoo.so foo.o
+

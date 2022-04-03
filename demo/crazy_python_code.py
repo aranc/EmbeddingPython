@@ -2,6 +2,8 @@ import numpy as np
 from matplotlib import pyplot as plt
 import re
 
+# Note: you can change this code without re-compiling anything!!!
+
 def parse_command(cmd):
     cmd = cmd.strip()
 

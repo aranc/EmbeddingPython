@@ -4,4 +4,6 @@ echo PYVER: $PYVER
 
 cythonize -3 -i bridge.pyx
 
-gcc -Wall -pthread -I/usr/include/python${PYVER} -I/usr/include/python${PYVER} -L/usr/lib -L/usr/lib/python${PYVER}/config-${PYVER}-x86_64-linux-gnu -lpython${PYVER} -lcrypt -lpthread -ldl -lutil -lm -lm -Xlinker -export-dynamic -Wl,-O1 -Wl,-Bsymbolic-functions main.c bridge*.so -o main
+#export LD_LIBRARY_PATH=`pwd`
+
+gcc -Wall -pthread -I/usr/include/python${PYVER} -I/usr/include/python${PYVER} -L/usr/lib -L/usr/lib/python${PYVER}/config-${PYVER}-x86_64-linux-gnu -lpython${PYVER} -lcrypt -lpthread -ldl -lutil -lm -lm -Xlinker -export-dynamic -Wl,-O1 -Wl,-Bsymbolic-functions -L`pwd` main.c -o main

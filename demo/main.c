@@ -7,6 +7,8 @@ int main(int argc, char** argv)
 {
   char cmd[500];
 
+  import_bridge();
+
   printf("GO GO GO\n");
 
   while (1) {

@@ -6,6 +6,7 @@
 int main(int argc, char** argv)
 {
   char cmd[500];
+  char res[500];
 
   Py_Initialize();
   import_bridge();
@@ -13,6 +14,9 @@ int main(int argc, char** argv)
   printf("run \"hello world\" test:\n");
   hello_world();
   printf("\n");
+
+  parse_command("dog", res);
+  printf("%s\n", res);
 
   if (1) {
     Py_Finalize();

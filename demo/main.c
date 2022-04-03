@@ -7,6 +7,7 @@ int main(int argc, char** argv)
 {
   char cmd[500];
 
+  Py_Initialize();
   import_bridge();
 
   printf("GO GO GO\n");
@@ -20,5 +21,7 @@ int main(int argc, char** argv)
     printf("kkkkkk\n");
   }
   
+  Py_Finalize();
+
   return 0;
 }

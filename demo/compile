@@ -1,4 +1,7 @@
 
-#cythonize -3 -i bridge.pyx
+PYVER=`python3 -c "import sys; print(sys.version[:3])"`
+echo PYVER: $PYVER
 
-gcc -Wall main.c -o main
+cythonize -3 -i bridge.pyx
+
+gcc -Wall -pthread -I/usr/include/python${PYVER} -I/usr/include/python${PYVER} -L/usr/lib -L/usr/lib/python${PYVER}/config-${PYVER}-x86_64-linux-gnu -lpython${PYVER} -lcrypt -lpthread -ldl -lutil -lm -lm -Xlinker -export-dynamic -Wl,-O1 -Wl,-Bsymbolic-functions main.c bridge*.so -o main

@@ -4,3 +4,6 @@ PYVER=`python3 -c "import sys; print(sys.version[:3])"`
 cythonize -3 -i bridge.pyx
 
 gcc main.c $(/usr/bin/python3-config --ldflags) $(/usr/bin/python3-config --cflags) -L`pwd` -lpython${PYVER} -fPIE -o main
+
+export PYTHONPATH=`pwd`
+

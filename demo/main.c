@@ -14,6 +14,11 @@ int main(int argc, char** argv)
   hello_world();
   printf("\n");
 
+  if (1) {
+    Py_Finalize();
+    return 0;
+  }
+
   printf("GO GO GO\n");
 
   while (1) {

@@ -29,4 +29,4 @@ def parse_command(cmd):
         number = int(cmd)
         return str(number * number)
 
-    return "Unkown command: " + cmd
+    return "Unknown command: " + cmd

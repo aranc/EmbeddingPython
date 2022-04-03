@@ -15,14 +15,6 @@ int main(int argc, char** argv)
   hello_world();
   printf("\n");
 
-  parse_command("dog", res);
-  printf("%s\n", res);
-
-  if (1) {
-    Py_Finalize();
-    return 0;
-  }
-
   printf("GO GO GO\n");
 
   while (1) {
@@ -31,7 +23,9 @@ int main(int argc, char** argv)
     if (!strncmp(cmd, "quit", 5)) {
         break;
     }
-    printf("kkkkkk\n");
+
+    parse_command(cmd, res);
+    printf("%s\n", res);
   }
   
   Py_Finalize();

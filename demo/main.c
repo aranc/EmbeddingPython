@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-//#include "bridge_api.h"
+#include "bridge_api.h"
 
 int main(int argc, char** argv)
 {

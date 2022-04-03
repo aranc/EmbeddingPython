@@ -7,5 +7,5 @@
 cdef api hello_world():
     print("hello world")
 
-cdef api parse_command(cmd):
-    return "mewo"
+#cdef api parse_command(cmd):
+#    return "mewo"

@@ -10,6 +10,10 @@ int main(int argc, char** argv)
   Py_Initialize();
   import_bridge();
 
+  printf("run \"hello world\" test:\n");
+  hello_world();
+  printf("\n");
+
   printf("GO GO GO\n");
 
   while (1) {

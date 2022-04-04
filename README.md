@@ -1,6 +1,6 @@
 # EmbeddingPython
 
-This github contains a demo for embedding Python inside of C (Linux / WSL)
+This github contains a demo for embedding Python inside of C using Cython (Linux / WSL)
 
 The demo is inside the `demo` folder, so `cd demo` to use it. (Please ignore the `SOdemo` folder, it contains a simpler demo of compiling a Shared Object library and using it from C / Python).
 
@@ -39,5 +39,7 @@ all bugs were removed
 ```
 
 (The `parabola` command plots a parabola using matplotlib and numpy. The `pdb` command opens the Python debugger)
+
+So what we see above is a C program (`main.c`) that asks the user for commands and emits responses. The cool thing is that the commands are handled in a Python code (`crazy_python_code.py`)
 
 And you can change `crazy_python_code.py` even after compiling to add more commands and experiments to the demo
